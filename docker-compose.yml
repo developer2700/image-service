@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/apache/Dockerfile
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html
+
+  test:
+    build:
+      context: .
+      dockerfile: docker/apache/Dockerfile
+    command: sh -c "composer install --no-interaction --optimize-autoloader --no-scripts --no-plugins && ./vendor/bin/phpunit"
+    volumes:
+      - .:/var/www/html

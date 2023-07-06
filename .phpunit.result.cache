@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"Tests\\ImageControllerTest::testGenerateImage":0.121,"Tests\\ImageControllerTest::testCropImage":0.045,"Tests\\ImageControllerTest::testResizeImage":0.03,"Tests\\ImageControllerTest::testImageNotFound":0.007}}
